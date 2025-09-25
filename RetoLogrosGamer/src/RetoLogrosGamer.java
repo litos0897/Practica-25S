@@ -1,3 +1,5 @@
+import static java.lang.Math.max;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class RetoLogrosGamer {
@@ -215,78 +217,79 @@ public class RetoLogrosGamer {
         // ======= TU CÓDIGO AQUÍ =======
 
         String juego = "Fortnite";
-        int kills = 24;
-        int muertes = 12;
+        int kills = 28;
+        int muertes = 14;
         int asistencias = 8;
-        int tiempoMin = 143;
+        int tiempoMin = 3;
         int objetivos = 1;
         boolean desconexion = true;
         int dañoHecho = 359;
         int dañoRecibido = 102;
         int oro = 350;
 
-        if (desconexion == true && tiempoMin > 5) {
-            System.out.println("Logro NEGATIVO: Rage Quit 😠");
-        }
+        if (muertes == 0 && kills == 0 && asistencias == 0 && tiempoMin < 2) {
+            System.out.println("Partida inválida: AFK 🚪");
+        } else {
+            boolean rageQuit = true;
+            if (desconexion && tiempoMin < 5) {
+                System.out.println("Logro NEGATIVO: Rage Quit 😠");
+                rageQuit = true;
 
-        int KDA = (kills + asistencias / muertes);
-        if (KDA >= 5) {
-            System.out.println();
-        }
-        if (3 <= KDA && KDA < 5) {
-            System.out.println("Jugador PRO");
-        }
-        if (1 <= KDA && KDA < 3) {
-            System.out.println("Jugador NORMAL");
-        }
-        if (KDA < 1) {
-            System.out.println("Jugador NOOB");
-        }
+            }
+            double KDA = (kills + asistencias / max(1, muertes));
+            if (KDA >= 5) {
+                System.out.println("Jugador PRO");
 
-        if (kills >= 10) {
-            System.out.println("Logro: Cazador experto 🏹");
-        }
-        if (muertes == 0 && kills >= 5) {
-            System.out.println("Logro: Intocable");
-        }
-        if (tiempoMin > 60) {
-            System.out.println("Logro: Maratón gamer ⏱️");
-        }
-        if (dañoHecho > dañoRecibido * 2) {
-            System.out.println("Logro: Dominio total 💥");
-        }
-        if (objetivos >= 3) {
-            System.out.println("Logro: Objetivos de mapa 🎯");
+                if (3 <= KDA && KDA < 5) {
+                    System.out.println("Jugador BUENO");
+                }
+                if (1 <= KDA && KDA < 3) {
+                    System.out.println("Jugador NORMAL");
+                }
+                if (KDA < 1) {
+                    System.out.println("Jugador NOOB");
+                }
 
-        }
-        if (kills >= 15 && muertes <= 2) {
-            System.out.println("Victoria agresiva (Fortnite) 🔫");
-        }
-        if (oro >= 2000) {
-            System.out.println("Ahorrista de V-Bucks (Fortnite) 💰");
-        }
-        if (objetivos >= 2 && asistencias >= 10) {
-            System.out.println("Shotcaller (LoL) 🗣️");
-        }
-        if (tiempoMin >= 45 && dañoRecibido == 0) {
-            System.out.println("Superviviente pacífico (MC) 🌿");
-        }
-        if (objetivos >= 5) {
-            System.out.println("Constructor incansable (MC) 🧱");
-        }
-        if (kills >= 6 && dañoRecibido <= 1000) {
-            System.out.println("Entrenador maestro (PKMN) 🧢");
-        }
-        if (asistencias >= 3) {
-            System.out.println("Apoyo del equipo (PKMN) 🤝");
-        }
-        if ("Rage Quit" !! ) {
-        }
-        if (muertes== 0 && kills == 0 && asistencias == 0 && tiempoMin < 2){
-            System.out.println("Partida inválida: AFK" y NO mostrar más logros);
+                if (kills >= 10) {
+                    System.out.println("Logro: Cazador experto 🏹");
+                }
+                if (muertes == 0 && kills >= 5) {
+                    System.out.println("Logro: Intocable");
+                }
+                if (tiempoMin > 60) {
+                    System.out.println("Logro: Maratón gamer ⏱️");
+                }
+                if (dañoHecho > dañoRecibido * 2) {
+                    System.out.println("Logro: Dominio total 💥");
+                }
+                if (objetivos >= 3) {
+                    System.out.println("Logro: Objetivos de mapa 🎯");
 
+                }
+                if (kills >= 15 && muertes <= 2) {
+                    System.out.println("Victoria agresiva (Fortnite) 🔫");
+                }
+                if (oro >= 2000) {
+                    System.out.println("Ahorrista de V-Bucks (Fortnite) 💰");
+                }
+                if (objetivos >= 2 && asistencias >= 10) {
+                    System.out.println("Shotcaller (LoL) 🗣️");
+                }
+                if (tiempoMin >= 45 && dañoRecibido == 0) {
+                    System.out.println("Superviviente pacífico (MC) 🌿");
+                }
+                if (objetivos >= 5) {
+                    System.out.println("Constructor incansable (MC) 🧱");
+                }
+                if (kills >= 6 && dañoRecibido <= 1000) {
+                    System.out.println("Entrenador maestro (PKMN) 🧢");
+                }
+                if (asistencias >= 3) {
+                    System.out.println("Apoyo del equipo (PKMN) 🤝");
+                }
+            }
+        }
     }
+
+
 }
-
-
-
