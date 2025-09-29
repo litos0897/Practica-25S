@@ -243,10 +243,10 @@ public class RetoLogrosGamer {
                 if (3 <= KDA && KDA < 5) {
                     System.out.println("Jugador BUENO");
                 }
-                if (1 <= KDA && KDA < 3) {
+                else if (1 <= KDA && KDA < 3) {
                     System.out.println("Jugador NORMAL");
                 }
-                if (KDA < 1) {
+                else if (KDA < 1) {
                     System.out.println("Jugador NOOB");
                 }
                 if (kills >= 10) {
@@ -263,7 +263,6 @@ public class RetoLogrosGamer {
                 }
                 if (objetivos >= 3) {
                     System.out.println("Logro: Objetivos de mapa 🎯");
-
                 }
                 if (kills >= 15 && muertes <= 2) {
                     System.out.println("Victoria agresiva (Fortnite) 🔫");
