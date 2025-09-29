@@ -218,14 +218,14 @@ public class RetoLogrosGamer {
 
         String juego = "Fortnite";
         int kills = 28;
-        int muertes = 14;
+        int muertes = 1;
         int asistencias = 8;
-        int tiempoMin = 3;
+        int tiempoMin = 80;
         int objetivos = 1;
         boolean desconexion = true;
         int danhoHecho = 359;
         int danhoRecibido = 102;
-        int oro = 350;
+        int oro = 3500;
 
         if (muertes == 0 && kills == 0 && asistencias == 0 && tiempoMin < 2) {
             System.out.println("Partida inválida: AFK 🚪");
@@ -242,11 +242,9 @@ public class RetoLogrosGamer {
 
                 if (3 <= KDA && KDA < 5) {
                     System.out.println("Jugador BUENO");
-                }
-                else if (1 <= KDA && KDA < 3) {
+                } else if (1 <= KDA && KDA < 3) {
                     System.out.println("Jugador NORMAL");
-                }
-                else if (KDA < 1) {
+                } else if (KDA < 1) {
                     System.out.println("Jugador NOOB");
                 }
                 if (kills >= 10) {
@@ -264,34 +262,54 @@ public class RetoLogrosGamer {
                 if (objetivos >= 3) {
                     System.out.println("Logro: Objetivos de mapa 🎯");
                 }
-                if (kills >= 15 && muertes <= 2) {
-                    System.out.println("Victoria agresiva (Fortnite) 🔫");
-                }
-                if (oro >= 2000) {
-                    System.out.println("Ahorrista de V-Bucks (Fortnite) 💰");
-                }
-                if (objetivos >= 2 && asistencias >= 10) {
-                    System.out.println("Shotcaller (LoL) 🗣️");
-                }
-                if (tiempoMin >= 45 && danhoRecibido == 0) {
-                    System.out.println("Superviviente pacífico (MC) 🌿");
-                }
-                if (objetivos >= 5) {
-                    System.out.println("Constructor incansable (MC) 🧱");
-                }
-                if (kills >= 6 && danhoRecibido <= 1000) {
-                    System.out.println("Entrenador maestro (PKMN) 🧢");
-                }
-                if (asistencias >= 3) {
-                    System.out.println("Apoyo del equipo (PKMN) 🤝");
-                }
+                if (juego == "Fortnite") {
 
-                System.out.println("El jugador tiene " + kills + " + kills, " + muertes + " muertes, " + asistencias + " asistencias, con un tiempo de juego de " + tiempoMin + " minutos, habiendo cumplido " + danhoHecho + " objetivo, habiendo hecho " + danhoRecibido + " de daño, 102 de daño recibido y obteniendo " + oro +  " de oro.");
-                System.out.println("El KDA del jugador es de " + KDA);
-                //System.out.println("El jugador ha obtenido los siguientes logros: " + );
+                    if (kills >= 15 && muertes <= 2) {
+                        System.out.println("Victoria agresiva (Fortnite) 🔫");
+                    }
+                    if (oro >= 2000) {
+                        System.out.println("Ahorrista de V-Bucks (Fortnite) 💰");
+
+                    } else if (juego == "Minecraft") {
+
+                        if (objetivos >= 2 && asistencias >= 10) {
+                            System.out.println("Shotcaller (LoL) 🗣️");
+                        }
+                        if (tiempoMin >= 45 && danhoRecibido == 0) {
+                            System.out.println("Superviviente pacífico (MC) 🌿");
+                        }
+                        if (objetivos >= 5) {
+                            System.out.println("Constructor incansable (MC) 🧱");
+                        }
+                        if (kills >= 6 && danhoRecibido <= 1000) {
+                            System.out.println("Entrenador maestro (PKMN) 🧢");
+                        }
+                        if (asistencias >= 3) {
+                            System.out.println("Apoyo del equipo (PKMN) 🤝");
+                        }
+
+                    }
+
+                    System.out.println("El jugador tiene " + kills + " + kills, " + muertes + " muertes, " + asistencias + " asistencias, con un tiempo de juego de " + tiempoMin + " minutos, habiendo cumplido " + danhoHecho + " objetivo, habiendo hecho " + danhoRecibido + " de daño, 102 de daño recibido y obteniendo " + oro + " de oro.");
+                    System.out.println("El KDA del jugador es de " + KDA);
+
+                    System.out.println("LISTA DE TROFEOS");
+                    if (kills >= 10) ;
+                    System.out.println("Logro: Cazador experto 🏹");
+                    if (danhoRecibido > danhoRecibido * 2) ;
+                    System.out.println("Logro: Dominio total 💥");
+
+                    System.out.println(("MENSAJES DE EXCLUSIÓN"));
+                    if (rageQuit == true) ;
+                    System.out.println("Logro NEGATIVO: Rage Quit 😠");
+                    if (muertes == 0 && kills == 0 && asistencias == 0 && tiempoMin < 2) ;
+                    System.out.println("Partida inválida: AFK");
+
+                    int score =0;
+                    if (kills >= 10) score +=10;
+                    if (muertes==0 && kills >=5) score +=10;
+                    if (tiempoMin>60) score +=10;               }
             }
         }
     }
-
-
 }
