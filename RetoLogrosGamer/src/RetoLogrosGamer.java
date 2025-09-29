@@ -287,6 +287,10 @@ public class RetoLogrosGamer {
                 if (asistencias >= 3) {
                     System.out.println("Apoyo del equipo (PKMN) 🤝");
                 }
+
+                System.out.println("El jugador tiene " + kills + " + kills, " + muertes + " muertes, " + asistencias + " asistencias, con un tiempo de juego de " + tiempoMin + " minutos, habiendo cumplido " + dañoHecho + " objetivo, habiendo hecho " + dañoRecibido + " de daño, 102 de daño recibido y obteniendo " + oro +  " de oro.");
+                System.out.println("El KDA del jugador es de " + KDA);
+                //System.out.println("El jugador ha obtenido los siguientes logros: " + );
             }
         }
     }
