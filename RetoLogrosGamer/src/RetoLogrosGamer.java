@@ -223,8 +223,8 @@ public class RetoLogrosGamer {
         int tiempoMin = 3;
         int objetivos = 1;
         boolean desconexion = true;
-        int dañoHecho = 359;
-        int dañoRecibido = 102;
+        int danhoHecho = 359;
+        int danhoRecibido = 102;
         int oro = 350;
 
         if (muertes == 0 && kills == 0 && asistencias == 0 && tiempoMin < 2) {
@@ -249,7 +249,6 @@ public class RetoLogrosGamer {
                 if (KDA < 1) {
                     System.out.println("Jugador NOOB");
                 }
-
                 if (kills >= 10) {
                     System.out.println("Logro: Cazador experto 🏹");
                 }
@@ -259,7 +258,7 @@ public class RetoLogrosGamer {
                 if (tiempoMin > 60) {
                     System.out.println("Logro: Maratón gamer ⏱️");
                 }
-                if (dañoHecho > dañoRecibido * 2) {
+                if (danhoHecho > danhoRecibido * 2) {
                     System.out.println("Logro: Dominio total 💥");
                 }
                 if (objetivos >= 3) {
@@ -275,20 +274,20 @@ public class RetoLogrosGamer {
                 if (objetivos >= 2 && asistencias >= 10) {
                     System.out.println("Shotcaller (LoL) 🗣️");
                 }
-                if (tiempoMin >= 45 && dañoRecibido == 0) {
+                if (tiempoMin >= 45 && danhoRecibido == 0) {
                     System.out.println("Superviviente pacífico (MC) 🌿");
                 }
                 if (objetivos >= 5) {
                     System.out.println("Constructor incansable (MC) 🧱");
                 }
-                if (kills >= 6 && dañoRecibido <= 1000) {
+                if (kills >= 6 && danhoRecibido <= 1000) {
                     System.out.println("Entrenador maestro (PKMN) 🧢");
                 }
                 if (asistencias >= 3) {
                     System.out.println("Apoyo del equipo (PKMN) 🤝");
                 }
 
-                System.out.println("El jugador tiene " + kills + " + kills, " + muertes + " muertes, " + asistencias + " asistencias, con un tiempo de juego de " + tiempoMin + " minutos, habiendo cumplido " + dañoHecho + " objetivo, habiendo hecho " + dañoRecibido + " de daño, 102 de daño recibido y obteniendo " + oro +  " de oro.");
+                System.out.println("El jugador tiene " + kills + " + kills, " + muertes + " muertes, " + asistencias + " asistencias, con un tiempo de juego de " + tiempoMin + " minutos, habiendo cumplido " + danhoHecho + " objetivo, habiendo hecho " + danhoRecibido + " de daño, 102 de daño recibido y obteniendo " + oro +  " de oro.");
                 System.out.println("El KDA del jugador es de " + KDA);
                 //System.out.println("El jugador ha obtenido los siguientes logros: " + );
             }
