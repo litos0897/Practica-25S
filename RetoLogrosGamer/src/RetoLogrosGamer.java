@@ -293,23 +293,34 @@ public class RetoLogrosGamer {
                     System.out.println("El jugador tiene " + kills + " + kills, " + muertes + " muertes, " + asistencias + " asistencias, con un tiempo de juego de " + tiempoMin + " minutos, habiendo cumplido " + danhoHecho + " objetivo, habiendo hecho " + danhoRecibido + " de daño, 102 de daño recibido y obteniendo " + oro + " de oro.");
                     System.out.println("El KDA del jugador es de " + KDA);
 
-                    System.out.println("LISTA DE TROFEOS");
+                    System.out.println("======LISTA DE TROFEOS======");
                     if (kills >= 10) ;
                     System.out.println("Logro: Cazador experto 🏹");
                     if (danhoRecibido > danhoRecibido * 2) ;
                     System.out.println("Logro: Dominio total 💥");
 
-                    System.out.println(("MENSAJES DE EXCLUSIÓN"));
+                    System.out.println(("======MENSAJES DE EXCLUSIÓN======"));
                     if (rageQuit == true) ;
                     System.out.println("Logro NEGATIVO: Rage Quit 😠");
                     if (muertes == 0 && kills == 0 && asistencias == 0 && tiempoMin < 2) ;
                     System.out.println("Partida inválida: AFK");
 
-                    int score =0;
-                    if (kills >= 10) score +=10;
-                    if (muertes==0 && kills >=5) score +=10;
-                    if (tiempoMin>60) score +=10;               }
-            }
-        }
-    }
+                    int score = 0;
+                    if (kills >= 10) score += 10;
+                    if (muertes == 0 && kills >= 5) score += 10;
+                    if (tiempoMin > 60) score += 10;
+                    if (danhoHecho > danhoRecibido * 2) score += 10;
+                    if (kills >= 15 && muertes <= 2) score += 20;
+                    if (oro >= 2000) score += 20;
+                    if (score >= 40 && !rageQuit);
+                    System.out.println("MVP de la jornada 🏆");
+                    if (danhoRecibido == 0 && tiempoMin < 30);
+                    System.out.println("Perfect Defense 🧱");
+                    if (juego == "LOL"||juego == "Fortnite" && kills + asistencias >=25);
+                    System.out.println("Impacto masivo 🌪️");
+
+}
+}
+}
+}
 }
